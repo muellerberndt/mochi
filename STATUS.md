@@ -65,12 +65,20 @@ at 0.00). With four words every word is answered right at lesson 8. Each arm is 
 
 ### What is work in progress
 
-- **A treat held out.** With hunger at 0.4 and a treat held 90 units away for eight seconds,
-  lemon and cookie in turn, the packaged brain takes 3 of 8 lemons and at most 1 of 8 cookies,
-  with or without emphasis on the bad taste. In its ordinary days it eats 8.5 treats a day
-  (the mother 6.1). The scenario shows no aversion specific to the lemon.
-- **A moved bowl.** After the bowl moves to the far wall Mochi eats nothing in four periods of
-  600 ticks, against two meals in the 1,200 ticks before the move, and its hunger ends at 1.0.
+- **A treat held out.** Scenario `treat`: a treat is held out for eight seconds, ten offers.
+  The mother takes a cookie every time and never a lemon. The packaged brain takes a cookie
+  held 90 units away 9 times of 10 when hungry (hunger 0.7, within 8 ticks), 6 of 10 at hunger
+  0.4 and 3 of 10 at hunger 0.2. At hunger 0.4 it takes a fish 1 time of 10, a lemon 2 of 10,
+  and a cookie held 250 units away 1 of 10. In its ordinary days it eats 8.5 treats a day (the
+  mother 6.1).
+- **A bad bite.** Offered a lemon and a cookie in turn (hunger 0.4, sixteen offers), the brain
+  takes 3 lemons and at most 1 cookie, with or without emphasis on the bad taste. A bad bite
+  lowers the will to eat from the hand for both treats; an aversion to the lemon alone is
+  work in progress.
+- **A moved bowl.** The bowl stands in one place for the whole bootstrap, so the way to it is
+  learned from the sense of place. After the bowl moves to the far wall Mochi eats nothing in
+  four periods of 600 ticks, against two meals in the 1,200 ticks before the move, and its
+  hunger ends at 1.0.
 - **Unprompted tricks after lessons.** A freshly taught move is sometimes offered in silence
   (see the table above).
 

@@ -4,6 +4,8 @@
 //           does Mochi answer the word with the move, and does it keep quiet without the word?
 //   lemon   offer lemons and cookies in turn: does one bad bite change what it eats?
 //   bowl    move the bowl across the room: does it find its meals again?
+//   treat   hold out one kind of treat at a set hunger and distance: how often is it taken?
+//           `--policy mother` counts the scripted mother on the same offers.
 //
 // Usage: node sim/scenarios.mjs --scenario teach --life runs/boot/basic.life [--lessons 8 --seed 1 --out runs/teach.json]
 import { writeFileSync } from "node:fs";
@@ -14,7 +16,8 @@ import { sense } from "../web/js/senses.js";
 import { EMPHASIS } from "../web/js/world.js";
 import { A, ACTIONS, HEARING, OFFSETS, SOUNDS, SPEC, WORDS } from "../web/js/spec.js";
 
-const options = args({ scenario: "teach", life: "", lessons: 8, seed: 1, out: "", genes: "", stores: "", contrast: "routine", scold: "no", margin: 2, words: 2, bitter: -1 });
+const options = args({ scenario: "teach", life: "", lessons: 8, seed: 1, out: "", genes: "", stores: "", contrast: "routine", scold: "no", margin: 2, words: 2, bitter: -1,
+  policy: "brain", flavor: "cookie", hunger: 0.4, distance: 90, hold: 54 });
 if (options.bitter >= 0) EMPHASIS.bitter = options.bitter;      // how strongly a bad taste is remembered
 const brain = new BrainProcess();
 const boot = { op: "boot", spec: SPEC, path: join(ROOT, options.life) };
@@ -43,6 +46,7 @@ async function free(ticks, watch = null, onTrick = null) {
     sense(world, creature.observation);
     const wake = creature.arousal.update(creature.outcome, world.novelty(), world.m.needs);
     const obs = round(creature.observation);
+    if (options.policy === "mother") { live(creature, creature.mother.act(world)); continue; }
     const answer = await brain.call({ op: "tick", obs: [obs], reward: [creature.outcome.reward],
       salience: [Math.abs(creature.outcome.reward) + creature.outcome.emphasis], aroused: wake });
     const action = answer.refused ? A.rest : answer.action[0];
@@ -138,6 +142,24 @@ if (options.scenario === "teach") {
   result = { scenario: "lemon", offers, first_half: { lemon: share("lemon", offers.slice(0, half)), cookie: share("cookie", offers.slice(0, half)) },
     second_half: { lemon: share("lemon", offers.slice(half)), cookie: share("cookie", offers.slice(half)) } };
   console.log(JSON.stringify({ first_half: result.first_half, second_half: result.second_half }));
+} else if (options.scenario === "treat") {
+  // hold out one kind of treat toward the middle of the room until it is eaten or the hold ends
+  const offers = [];
+  for (let k = 0; k < options.lessons; k++) {
+    calm(); world.m.needs.hunger = options.hunger;
+    const dx = 480 - world.m.x, dy = 300 - world.m.y, far = Math.hypot(dx, dy) || 1;
+    world.moveHand(world.m.x + options.distance * dx / far, world.m.y + options.distance * dy / far, true);
+    world.holdTreat(options.flavor);
+    let taken = -1;
+    for (let t = 0; t < options.hold && taken < 0; t++) { await free(1); if (world.hand.holding === null) taken = t + 1; }
+    world.holdNothing();
+    offers.push({ offer: k + 1, taken: taken > 0, ticks: taken > 0 ? taken : null });
+    await free(30);
+  }
+  const taken = offers.filter(offer => offer.taken);
+  result = { scenario: "treat", policy: options.policy, flavor: options.flavor, hunger: options.hunger, distance: options.distance, hold_ticks: options.hold,
+    offers, taken: taken.length, of: offers.length, mean_ticks: taken.length ? +(taken.reduce((sum, offer) => sum + offer.ticks, 0) / taken.length).toFixed(1) : null };
+  console.log(JSON.stringify({ policy: result.policy, flavor: result.flavor, hunger: result.hunger, distance: result.distance, taken: result.taken, of: result.of, mean_ticks: result.mean_ticks }));
 } else if (options.scenario === "bowl") {
   // meals per half day before and after the bowl moves to the far wall
   const meals = async ticks => { const start = creature.events.eat || 0; await free(ticks); return (creature.events.eat || 0) - start; };

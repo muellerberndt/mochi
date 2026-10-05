@@ -60,7 +60,7 @@ with sync_playwright() as playwright:
         about = page.evaluate("document.getElementById('about').textContent")
         clause("pack_named", "Brain pack" in about and "Cadence" in about, about[:120])
         if args.expect_raised:
-            raised = page.evaluate("fetch('brains/index.json').then(r => r.json()).then(i => !i.packs.find(p => p.id === i.default).raised.untrained)")
+            raised = page.evaluate("import('./js/brainlink.js').then(m => m.brainIndex()).then(i => !i.packs.find(p => p.id === i.default).raised.untrained)")
             clause("raised_brain", raised)
 
         first = page.evaluate("window.mochi.ticks")
