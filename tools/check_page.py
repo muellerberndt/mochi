@@ -54,7 +54,7 @@ with sync_playwright() as playwright:
 
     started = time.time()
     page.goto(args.url)
-    booted = wait(page, "document.getElementById('boot').classList.contains('done')", 180)
+    booted = wait(page, "!!document.getElementById('boot') && document.getElementById('boot').classList.contains('done')", 180)
     clause("brain_starts", booted, {"seconds": round(time.time() - started, 1), "status": page.text_content("#bootText")})
     if booted:
         about = page.evaluate("document.getElementById('about').textContent")
@@ -96,7 +96,7 @@ with sync_playwright() as playwright:
         page.click("#save")
         clause("saves", wait(page, "document.getElementById('saved').textContent.startsWith('saved')", 30), page.text_content("#saved"))
         page.reload()
-        again = wait(page, "document.getElementById('boot').classList.contains('done')", 180)
+        again = wait(page, "!!document.getElementById('boot') && document.getElementById('boot').classList.contains('done')", 180)
         resumed = again and page.evaluate("window.mochi.page.name === 'Pixel' && window.mochi.page.decisions >= %d" % decisions)
         clause("reload_wakes_the_same_pet", resumed, {"name": page.evaluate("window.mochi.page.name") if again else None,
                                                       "diary": page.evaluate("window.mochi.page.diary[0] && window.mochi.page.diary[0].text") if again else None})
