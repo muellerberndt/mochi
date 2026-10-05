@@ -1,0 +1,75 @@
+{
+ "default": "mochi-0.74.0-a",
+ "packs": [
+  {
+   "id": "mochi-0.74.0-a",
+   "name": "Basic Mochi",
+   "cadence": "0.74.0",
+   "created": "2026-10-05",
+   "neurons": 1264,
+   "synapses": 393728,
+   "raised": {
+    "bootstrap": {
+     "streams": 32,
+     "guided_ticks": 4000,
+     "weaning_ticks": 16000,
+     "weaning_turns": {
+      "alone": 150,
+      "together": 150
+     },
+     "agreement_with_mother_at_the_end_of_guiding": 0.8787,
+     "agreement_with_mother_over_the_last_weaning_block": 0.7476,
+     "date": "2026-10-05"
+    },
+    "three_days_five_seeds": {
+     "brain_living": {
+      "portions_per_day": 5.056,
+      "drinks_per_day": 6.478,
+      "night_asleep": 0.97,
+      "night_asleep_in_bed": 0.78,
+      "pounce_hits_per_day": 34.334,
+      "reward_per_day": 13.584,
+      "routine_share": 0.885
+     },
+     "brain_frozen": {
+      "portions_per_day": 3.892,
+      "drinks_per_day": 5.012,
+      "night_asleep": 0.834,
+      "night_asleep_in_bed": 0.711,
+      "pounce_hits_per_day": 38.268,
+      "reward_per_day": 14.224,
+      "routine_share": 1
+     },
+     "mother": {
+      "portions_per_day": 3.41,
+      "drinks_per_day": 2.994,
+      "night_asleep": 0.955,
+      "night_asleep_in_bed": 0.955,
+      "pounce_hits_per_day": 11.602,
+      "reward_per_day": 16.442,
+      "routine_share": 0
+     },
+     "uniform_random": {
+      "portions_per_day": 0.578,
+      "drinks_per_day": 0.772,
+      "night_asleep": 0,
+      "night_asleep_in_bed": 0,
+      "pounce_hits_per_day": 1.2,
+      "reward_per_day": -9.322,
+      "routine_share": 0
+     }
+    },
+    "teaching_two_words_ten_lessons": {
+     "right_in_last_4_lessons": "7 of 8",
+     "unprompted_tricks_per_quiet_tick": 0.241,
+     "with_no_on_unprompted_tricks": "8 of 8, unprompted 0.188",
+     "without_the_contrast_half_unprompted": 0.966
+    },
+    "teaching_four_words_ten_lessons": {
+     "right_in_last_4_lessons": "12 of 16",
+     "unprompted_tricks_per_quiet_tick": 0.125
+    }
+   }
+  }
+ ]
+}

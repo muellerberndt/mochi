@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+runs/
+dist/
+.DS_Store
+# scratch packs made while developing
+web/brains/dev-*/
+# the wheel travels inside each brain pack
+web/vendor/

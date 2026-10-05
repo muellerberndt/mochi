@@ -1,0 +1,364 @@
+[
+ {
+  "name": "base",
+  "genes": {
+   "trace_amplitude": 0.0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "base-s2",
+  "genes": {
+   "trace_amplitude": 0.0
+  },
+  "ticks": 1500,
+  "seed": 2
+ },
+ {
+  "name": "trace01",
+  "genes": {
+   "trace_amplitude": 0.1
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "trace03",
+  "genes": {
+   "trace_amplitude": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "trace10",
+  "genes": {
+   "trace_amplitude": 1.0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "eta003",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.03
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "eta10",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_eta": 1.0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "beta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_beta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "beta03-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_beta": 0.3,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "quadratic",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_nudge": "quadratic"
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "quadratic-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_nudge": "quadratic",
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "margin08",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_margin": 0.8
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "margin-always",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_margin": 1.5
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "dentate2048",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate": 2048
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "dentate512",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate": 512
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "fan5",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_fan": 5
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "fan12",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_fan": 12
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "fan16",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_fan": 16
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "active015",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_active": 0.015
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "active05",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_active": 0.05
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "active08",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_active": 0.08
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "oneway",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_return": false
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "hub",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_hub": true
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "assoc128",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "association": 128
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "assoc512",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "association": 512
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "no-dentate",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate": 0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "compose-512",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "compose-384-256",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "layout": "compose",
+   "dentate": 0
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "temp05",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "temperature": 0.5
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "temp01",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "temperature": 0.1
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "d2048-f12-a05-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate": 2048,
+   "dentate_fan": 12,
+   "dentate_active": 0.05,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "d2048-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate": 2048,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "a05-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_active": 0.05,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "a08-f12-eta03",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "dentate_active": 0.08,
+   "dentate_fan": 12,
+   "teach_eta": 0.3
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "free128",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "free_steps": 128
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "free256",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "free_steps": 256
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "small-areas",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "areas": {
+    "sight": 64,
+    "smell": 24,
+    "hearing": 24,
+    "touch": 24,
+    "insula": 24,
+    "place": 32
+   }
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "eta03-margin08",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.3,
+   "teach_margin": 0.8
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "lateral02",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "lateral": -0.2
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "reflex",
+  "genes": {
+   "trace_amplitude": 0.0,
+   "reflex": [
+    "smell",
+    "mouth",
+    "needs",
+    "vision.hand"
+   ]
+  },
+  "ticks": 1500
+ },
+ {
+  "name": "bp-linear",
+  "kind": "backprop",
+  "hidden": 0,
+  "ticks": 1500
+ },
+ {
+  "name": "bp-mlp256",
+  "kind": "backprop",
+  "hidden": 256,
+  "ticks": 1500
+ }
+]

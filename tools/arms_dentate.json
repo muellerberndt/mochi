@@ -1,0 +1,7 @@
+[
+ {"name": "dentate", "genes": {}, "ticks": 600},
+ {"name": "dentate-oneway", "genes": {"dentate_return": false}, "ticks": 600},
+ {"name": "dentate-f12-a05", "genes": {"dentate_fan": 12, "dentate_active": 0.05}, "ticks": 600},
+ {"name": "dentate-notrace", "genes": {"trace_amplitude": 0.0}, "ticks": 600},
+ {"name": "no-dentate", "genes": {"dentate": 0}, "ticks": 600}
+]

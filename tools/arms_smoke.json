@@ -1,0 +1,5 @@
+[
+ {"name": "bp-linear", "kind": "backprop", "hidden": 0, "ticks": 2000},
+ {"name": "bp-mlp256", "kind": "backprop", "hidden": 256, "ticks": 2000},
+ {"name": "c1-512", "genes": {"layout": "compose", "first": 0, "association": 512, "trace_amplitude": 0}, "ticks": 300}
+]

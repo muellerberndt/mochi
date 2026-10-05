@@ -1,0 +1,416 @@
+[
+ {
+  "name": "c512",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-s2",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 2
+ },
+ {
+  "name": "c256",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 256,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c768",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 768,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c1024",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 1024,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-trace01",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.1
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-trace03",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.3
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-trace10",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 1.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta005",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.05
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta02",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.2
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta03",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.3
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta05",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.5
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-margin07",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_margin": 0.7
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-margin09",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_margin": 0.9
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-always",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_margin": 1.5
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-temp01",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "temperature": 0.1
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-temp03",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "temperature": 0.3
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-quadratic",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_nudge": "quadratic"
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-beta02",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_beta": 0.2
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-beta005",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_beta": 0.05
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-lateral01",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "lateral": -0.1
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-bias01",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "resting_bias": 0.1
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-momentum05",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_momentum": 0.5
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c384-256",
+  "genes": {
+   "layout": "compose",
+   "first": 384,
+   "association": 256,
+   "dentate": 0,
+   "trace_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c768-eta02",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 768,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.2
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c1024-eta02",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 1024,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.2
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c768-eta02-m07",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 768,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.2,
+   "teach_margin": 0.7
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta02-m07",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "teach_eta": 0.2,
+   "teach_margin": 0.7
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-eta02-trace01",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.1,
+   "teach_eta": 0.2
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-separated",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "memory_expansion": 2048
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "c512-nostore",
+  "genes": {
+   "layout": "compose",
+   "first": 0,
+   "association": 512,
+   "dentate": 0,
+   "trace_amplitude": 0.0,
+   "memory_amplitude": 0.0
+  },
+  "ticks": 4000,
+  "seed": 1
+ },
+ {
+  "name": "bp-linear",
+  "kind": "backprop",
+  "hidden": 0,
+  "ticks": 4000
+ },
+ {
+  "name": "bp-mlp256",
+  "kind": "backprop",
+  "hidden": 256,
+  "ticks": 4000
+ },
+ {
+  "name": "bp-mlp512",
+  "kind": "backprop",
+  "hidden": 512,
+  "ticks": 4000
+ }
+]
