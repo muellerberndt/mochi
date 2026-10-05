@@ -106,9 +106,16 @@ python tools/brains.py install --from brain-someone-elses.zip
 
 ## Put it online
 
-The page needs a static host and nothing else. `python tools/bundle.py` writes `dist/mochi/`
-ready to copy to GitHub Pages, Netlify, Cloudflare Pages or a bucket, plus archives and a
-small Vite project for Lovable ([docs/LOVABLE.md](docs/LOVABLE.md)).
+The page needs a static host and nothing else.
+
+- **Embed it with one file.** [docs/lovable/index.html](docs/lovable/index.html) is a page of
+  twenty lines that loads the app and the brains from this repository through the jsDelivr
+  CDN and runs them under the host's own address. [docs/LOVABLE.md](docs/LOVABLE.md) has the
+  steps for a Lovable project, written for its coding agent.
+- **Copy `web/`** to GitHub Pages, Netlify, Cloudflare Pages or a bucket. The workflow in
+  `.github/workflows/pages.yml` publishes it to GitHub Pages when you run it.
+- **Bundle it.** `python tools/bundle.py` writes `dist/mochi/`, the same as an archive, each
+  brain pack as its own archive and a small Vite project with the app inside.
 
 ## Checks
 
@@ -129,7 +136,7 @@ node tools/pyodide_pack.mjs                # the default pack under Pyodide, tim
 | `sim/` | The headless harness: bootstrap, behaviour assay, scenarios. |
 | `tools/` | Sweeps, the pack and bundle builders, the page check. |
 | `tests/` | Checks for the world and for the brain host. |
-| `docs/` | The fork guide and the Lovable deployment steps. |
+| `docs/` | The fork guide, the Lovable deployment steps and the one-file embed. |
 
 ## Licence
 

@@ -151,6 +151,10 @@ Copy `dist/mochi/` to any static host: GitHub Pages, Netlify, Cloudflare Pages, 
 The host has to serve the files as they are and let the page reach `cdn.jsdelivr.net`, where the
 worker fetches Pyodide and NumPy. [LOVABLE.md](LOVABLE.md) has the steps for a Lovable project.
 
+A fork can also be embedded with one file. [lovable/index.html](lovable/index.html) loads the
+app and the brains of a public repository through the jsDelivr CDN: put your own
+`<user>/<repository>@<tag>` in its `MOCHI` line, push the tag, and copy the file to any site.
+
 ## Licence
 
 Mochi is MIT licensed. Do what you like with a fork and keep the notice. The Cadence wheel

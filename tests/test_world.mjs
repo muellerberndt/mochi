@@ -149,3 +149,10 @@ test("every action has a name and the tricks close the list", () => {
   assert.equal(ACTIONS.length, 17);
   assert.deepEqual(ACTIONS.slice(A.sit), ["sit", "spin", "jump", "paw"]);
 });
+
+test("the embed page printed in the Lovable instructions is the file itself", () => {
+  const guide = readFileSync(new URL("../docs/LOVABLE.md", import.meta.url), "utf8");
+  const file = readFileSync(new URL("../docs/lovable/index.html", import.meta.url), "utf8");
+  const printed = guide.slice(guide.indexOf("<!doctype html>"), guide.indexOf("</html>") + "</html>".length);
+  assert.equal(printed.split("\n").map(line => line.replace(/^ {3}/, "")).join("\n") + "\n", file);
+});

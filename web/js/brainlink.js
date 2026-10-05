@@ -15,9 +15,19 @@ export async function brainIndex() {
   return response.json();
 }
 
+// A worker has to come from the page's own origin. When the page's code is served from
+// elsewhere (the one-file embed loads it from a CDN), a one-line module on a blob URL of this
+// origin imports the real worker.
+function startWorker() {
+  const url = new URL("../worker.js", import.meta.url);
+  if (url.origin === location.origin) return new Worker(url, { type: "module" });
+  const shim = new Blob([`import ${JSON.stringify(url.href)};`], { type: "text/javascript" });
+  return new Worker(URL.createObjectURL(shim), { type: "module" });
+}
+
 export class BrainLink {
   constructor(onStatus = () => {}) {
-    this.worker = new Worker(new URL("../worker.js", import.meta.url), { type: "module" });
+    this.worker = startWorker();
     this.waiting = new Map();
     this.nextId = 1;
     this.manifest = null;
