@@ -197,7 +197,9 @@ twelve clauses pass (the brain starts, the pack is named and raised, decisions f
 view draws settling steps, the bowl fills, a word is heard, showing is a lesson, praise lands,
 the life saves, a reload wakes the same pet, no JavaScript error). The same check passes on
 `dist/mochi/` served as plain files, and the Vite project in `dist/lovable/` builds and shows
-the app in its iframe.
+the app in its iframe. The twelve clauses also pass on the one-file embed
+(`docs/lovable/index.html`) with the app and the brains served from a second origin, in
+Chromium.
 
 The engine under Pyodide 314.0.7 in Node, `Brain.compose` at the library's default trace:
 
@@ -216,6 +218,6 @@ records settling steps on fewer decisions as latency rises.
 
 | Check | Result |
 | --- | --- |
-| `npm test` (room, senses, mother, arousal) | 11 pass |
+| `npm test` (room, senses, mother, arousal, the embed page) | 12 pass |
 | `pytest tests` (the brain host's contracts) | 12 pass |
 | `tools/check_page.py --expect-raised` | 12 clauses pass |
